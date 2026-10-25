@@ -1,0 +1,12 @@
+{
+  "currency": "INR",
+  "monthly_income": "95000",
+  "income_stability": "stable",
+  "dependents": 1,
+  "emergency_fund_balance": "60000",
+  "debts": [
+    {"name": "HDFC Credit Card", "balance": "85000", "annual_rate_pct": "42", "minimum_payment": "4250", "currency": "INR"},
+    {"name": "Two-wheeler Loan", "balance": "62000", "annual_rate_pct": "11.5", "minimum_payment": "8500", "currency": "INR"},
+    {"name": "Personal Loan", "balance": "150000", "annual_rate_pct": "14", "minimum_payment": "5200", "currency": "INR"}
+  ]
+}

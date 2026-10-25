@@ -1,0 +1,12 @@
+{
+  "currency": "USD",
+  "monthly_income": "5200",
+  "income_stability": "variable",
+  "dependents": 0,
+  "emergency_fund_balance": "4000",
+  "debts": [
+    {"name": "Visa Credit Card", "balance": "6800", "annual_rate_pct": "24.99", "minimum_payment": "204", "currency": "USD"},
+    {"name": "Car Loan", "balance": "4500", "annual_rate_pct": "6.9", "minimum_payment": "285", "currency": "USD"},
+    {"name": "Student Loan", "balance": "18400", "annual_rate_pct": "5.5", "minimum_payment": "200", "currency": "USD"}
+  ]
+}

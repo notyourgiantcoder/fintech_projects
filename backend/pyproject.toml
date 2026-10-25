@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finbo"
+version = "0.4.0"
+description = "Multi-agent personal finance + market research copilot with human-in-the-loop and guardrails"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7",
+    "agent-framework-core>=1.23,<2",
+    "agent-framework-openai>=1.17,<2",
+    "python-dotenv>=1.0",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.9",
+    "pyjwt[crypto]>=2.9",
+    "httpx>=0.27",
+    "yfinance>=1.0",
+    "feedparser>=6.0",
+    "trafilatura>=2.0",
+    "sqlalchemy>=2.0",
+    "openpyxl>=3.1",
+    "defusedxml>=0.7",
+    "opentelemetry-sdk>=1.30",
+    "opentelemetry-exporter-otlp-proto-http>=1.30",
+    "python-telegram-bot>=22.0,<23",
+]
+
+[project.scripts]
+finbo = "finbo.cli:main"
+
+[project.optional-dependencies]
+postgres = ["psycopg[binary]>=3.2"]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finbo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning:yfinance.*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

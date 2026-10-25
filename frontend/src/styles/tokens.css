@@ -1,0 +1,120 @@
+/* Finbo design tokens. Source of truth: DESIGN.md. Every text pairing verified >= 4.5:1
+   with antislop's contrast-check.py. */
+
+:root,
+:root[data-theme='light'] {
+  --page: #f6f5fb;
+  --card: #ffffff;
+  --sunken: #eeecf6;
+  --ink: #1c1830;
+  --muted: #5b5670;
+  --line: #e3e0ee;
+  --line-strong: #cfcbe0;
+  --primary: #1c1830;
+  --primary-ink: #ffffff;
+  --accent: #ff922b;
+  --accent-ink: #1c1830;
+  --accent-soft: #fff0e0;
+  --error: #c92a2a;
+  --ok: #237032;
+  --focus: #1c1830;
+  --shadow-float: 0 10px 30px rgb(28 24 48 / 0.12);
+
+  /* Crew identity: brand (badges, fills), text shade (names), tint (avatar ground). */
+  --finbo: #e8590c;
+  --finbo-text: #c2410c;
+  --finbo-tint: #fff0e6;
+  --penny: #1971c2;
+  --penny-text: #1864ab;
+  --penny-tint: #e7f5ff;
+  --hazel: #b35c00;
+  --hazel-text: #9a4e00;
+  --hazel-tint: #fff4e6;
+  --snowy: #6741d9;
+  --snowy-text: #6741d9;
+  --snowy-tint: #f3f0ff;
+  --bruno: #2b8a3e;
+  --bruno-text: #237032;
+  --bruno-tint: #ebfbee;
+  --scout: #0c8599;
+  --scout-text: #0b7285;
+  --scout-tint: #e3fafc;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --page: #14121f;
+  --card: #1e1b2c;
+  --sunken: #262238;
+  --ink: #f1eff8;
+  --muted: #b3aec7;
+  --line: #2e2a40;
+  --line-strong: #433d5c;
+  --primary: #f1eff8;
+  --primary-ink: #1c1830;
+  --accent: #ff922b;
+  --accent-ink: #1c1830;
+  --accent-soft: #3a2a1c;
+  --error: #ff8787;
+  --ok: #69db7c;
+  --focus: #f1eff8;
+  --shadow-float: 0 10px 30px rgb(0 0 0 / 0.45);
+
+  --finbo: #ff922b;
+  --finbo-text: #ff922b;
+  --finbo-tint: #3a2a1c;
+  --penny: #74c0fc;
+  --penny-text: #74c0fc;
+  --penny-tint: #1c2b3d;
+  --hazel: #ffa94d;
+  --hazel-text: #ffa94d;
+  --hazel-tint: #3a2c1a;
+  --snowy: #b197fc;
+  --snowy-text: #b197fc;
+  --snowy-tint: #2a2347;
+  --bruno: #69db7c;
+  --bruno-text: #69db7c;
+  --bruno-tint: #1c3323;
+  --scout: #66d9e8;
+  --scout-text: #66d9e8;
+  --scout-tint: #17323a;
+  color-scheme: dark;
+}
+
+:root {
+  --font-display: 'Bricolage Grotesque', 'Figtree', 'Noto Color Emoji', system-ui, sans-serif;
+  --font-text: 'Figtree', 'Noto Color Emoji', system-ui, sans-serif;
+
+  --t-sm: 0.875rem;
+  --t-body: 1.0625rem;
+  --t-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --t-h3: 1.125rem;
+  --t-h2: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem);
+  --t-h1: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  --t-hero: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+  --t-big: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+
+  --r-card: 20px;
+  --r-big: 28px;
+  --r-btn: 12px;
+  --r-input: 14px;
+
+  --gutter: clamp(16px, 3vw, 32px);
+  --topbar: 64px;
+  --tabbar: 0px;
+}
+
+@media (max-width: 759px) {
+  :root {
+    --topbar: 56px;
+    --tabbar: 64px;
+  }
+}
+
+/* Crew scoping: any element with .crew-<id> exposes that member's colours. */
+.crew-finbo { --crew: var(--finbo); --crew-text: var(--finbo-text); --crew-tint: var(--finbo-tint); }
+.crew-penny { --crew: var(--penny); --crew-text: var(--penny-text); --crew-tint: var(--penny-tint); }
+.crew-hazel { --crew: var(--hazel); --crew-text: var(--hazel-text); --crew-tint: var(--hazel-tint); }
+.crew-snowy { --crew: var(--snowy); --crew-text: var(--snowy-text); --crew-tint: var(--snowy-tint); }
+.crew-bruno { --crew: var(--bruno); --crew-text: var(--bruno-text); --crew-tint: var(--bruno-tint); }
+.crew-scout { --crew: var(--scout); --crew-text: var(--scout-text); --crew-tint: var(--scout-tint); }
